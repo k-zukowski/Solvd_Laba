@@ -1,0 +1,1 @@
+Architect{degree=MID} Worker{wage=400.0} people.Pearson{name='name', surname='ss', birthDay=2022-12-19}
