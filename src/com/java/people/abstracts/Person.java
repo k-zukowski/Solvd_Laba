@@ -3,50 +3,54 @@ package people.abstracts;
 import java.time.LocalDate;
 
 public abstract class Person {
-    private String name;
-    private String surname;
-    private LocalDate birthDay;
 
-    public Person(String name, String surname, LocalDate birthDay) {
-        this.name = name;
-        this.surname = surname;
-        this.birthDay = birthDay;
-    }
+  private String name;
+  private String surname;
+  private LocalDate birthDay;
 
-    public String getName() {
-        return name;
-    }
+  public Person(String name, String surname, LocalDate birthDay) {
+    this.name = name;
+    this.surname = surname;
+    this.birthDay = birthDay;
+  }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+  public Person() {
+  }
 
-    public String getSurname() {
-        return surname;
-    }
+  public String getName() {
+    return name;
+  }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
+  public void setName(String name) {
+    this.name = name;
+  }
 
-    public LocalDate getBirthDay() {
-        return birthDay;
-    }
+  public String getSurname() {
+    return surname;
+  }
 
-    public void setBirthDay(LocalDate birthDay) {
-        this.birthDay = birthDay;
-    }
+  public void setSurname(String surname) {
+    this.surname = surname;
+  }
 
-    public int age() {
-        return LocalDate.now().getYear() - this.birthDay.getYear();
-    }
+  public LocalDate getBirthDay() {
+    return birthDay;
+  }
 
-    @Override
-    public String toString() {
-        return "People.Pearson{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", birthDay=" + birthDay +
-                '}';
-    }
+  public void setBirthDay(LocalDate birthDay) {
+    this.birthDay = birthDay;
+  }
+
+  public int age() {
+    return LocalDate.now().getYear() - this.birthDay.getYear();
+  }
+
+  @Override
+  public String toString() {
+    return "People.Pearson{" +
+        "name='" + name + '\'' +
+        ", surname='" + surname + '\'' +
+        ", birthDay=" + birthDay +
+        '}';
+  }
 }
